@@ -1,4 +1,4 @@
-set :application, 'tomdallimore'
+set :application, 'urbanscrumping'
 set :user, 'root'
 set :scm, 'git'
 set :repository, 'git@github.com:Jellyfishboy/urban_scrumping.git'
