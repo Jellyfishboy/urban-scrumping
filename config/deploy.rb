@@ -29,7 +29,7 @@ namespace :wordpress do
     end
     desc "Copy production config file across"
     task :production_config, :roles => :app do 
-        run "cp /var/www/wpconfig/urbanscrumping/wp-config-production.php /var/www/tomdallimore/current"
+        run "cp /var/www/wpconfig/urbanscrumping/wp-config-production.php /var/www/urbanscrumping/current"
     end
 end
 after "deploy:create_symlink", "wordpress:create_symlinks"
