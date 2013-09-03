@@ -27,5 +27,10 @@ namespace :wordpress do
     task :create_symlinks, :roles => :app do
         run "ln -nfs #{shared_path}/urbanscrumping_uploads #{release_path}/wp-content/uploads"
     end
+    desc "Copy production config file across"
+    task :production_config, :roles => :app do 
+        run "cp /var/www/wpconfig/urbanscrumping/wp-config-production.php /var/www/tomdallimore/current"
+    end
 end
 after "deploy:create_symlink", "wordpress:create_symlinks"
+after "wordpress:create_symlinks", "wordpress:production_config"
