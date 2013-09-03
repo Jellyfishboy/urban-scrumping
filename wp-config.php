@@ -68,7 +68,7 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-config-production.php' ) ) {
      * prefix. Only numbers, letters, and underscores please!
      */
     $table_prefix  = 'urbanscrumping_';
-
+ 
     /**
      * WordPress Localized Language, defaults to English.
      *
